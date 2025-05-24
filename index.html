@@ -7,7 +7,7 @@
     <title>Devang's Portfolio</title>
     <link rel="icon" href="img/DevangProfile.jpg" />
     <link rel="stylesheet" href="fonts/poppins.ttf" />
-    <link rel="stylsheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/all.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/all.css" />
     <!-- Owl Carousel -->
@@ -270,7 +270,7 @@
                     <li class="">
                       <span class="font-weight-600 mr-2"
                         ><i class="fas fa-envelope"></i> :</span
-                      ><a href="mailto:dev.kush1380@gmail.com"
+                      ><a href="mailto:devangkushwahofficial@gmail.com"
                         >devangkushwahofficial@gmail.com</a
                       >
                     </li>
@@ -1172,12 +1172,8 @@
                 </div>
                 <h3>Email</h3>
                 <p class="text-muted text-center">
-                  <a href="mailto:dev.kush1380@gmail.com"
-                        style="color: #6c757d">dev.kush1380@gmail.com</a
-                      ><br>
-                      <a href="mailto:d8889922685@gmail.com"
-                      style="color: #6c757d"
-                        >d8889922685@gmail.com</a
+                  <a href="mailto:devangkushwahofficial@gmail.com"
+                        style="color: #6c757d">devangkushwahofficial@gmail.com</a
                       >
                 </p>
               </div>
@@ -1200,8 +1196,7 @@
                 </div>
                 <h3>Address</h3>
                 <p class="text-muted">
-                    Ambika Nager, Gali No. 1,
-                    BTI Road , KHARGONE (M.P)
+                    KHARGONE (M.P), India
                 </p>
               </div>
             </div>
@@ -1312,5 +1307,25 @@
     <script src="externalJS/switcher.min.js"></script>
     <!-- Custom Script -->
     <script src="externalJS/theme.js"></script>
+    <script>
+      // Wait until the DOM is fully loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-link");
+    
+        function changeActiveLink() {
+          let index = sections.length;
+    
+          while (--index && window.scrollY + 100 < sections[index].offsetTop) {}
+    
+          navLinks.forEach((link) => link.classList.remove("active"));
+          navLinks[index].classList.add("active");
+        }
+    
+        changeActiveLink(); // Initial check
+        window.addEventListener("scroll", changeActiveLink);
+      });
+    </script>
+    
   </body>
 </html>
